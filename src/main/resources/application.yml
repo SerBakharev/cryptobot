@@ -1,0 +1,31 @@
+telegram:
+  bot:
+#    не вписывайте данные, так как можете отправить в публичный репозиторий
+#    используйте переменные среды для установки значений
+    username: ${BOT_NAME}
+    token: ${BOT_TOKEN}
+    notify:
+      delay:
+        value: 10
+        unit: MINUTES
+
+binance:
+  api:
+    getPrice: https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    open-in-view: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/cryptouser_db
+    user: Admin
+    password: postgres
+    hikari:
+      schema: cryptouser_schema
+      connection-init-sql: CREATE SCHEMA IF NOT EXISTS cryptouser_schema
+      connection-timeout: 10000

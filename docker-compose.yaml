@@ -1,0 +1,12 @@
+#version: '3.8'
+services:
+  db:
+    container_name: pg_container
+    image: postgres:16.2-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: Admin
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cryptouser_db
+    ports:
+      - "5435:5432"
