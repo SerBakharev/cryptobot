@@ -13,6 +13,8 @@ public class CryptoCurrencyService {
     private final AtomicReference<Double> price = new AtomicReference<>();
     private final BinanceClient client;
 
+
+
     public CryptoCurrencyService(BinanceClient client) {
         this.client = client;
     }

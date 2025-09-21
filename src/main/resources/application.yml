@@ -4,10 +4,12 @@ telegram:
 #    используйте переменные среды для установки значений
     username: ${BOT_NAME}
     token: ${BOT_TOKEN}
+    task:
+      frequency: 120000 # 2 минуты в миллисекундах
     notify:
       delay:
-        value: 10
-        unit: MINUTES
+        value: 600000
+#        unit: MINUTES
 
 binance:
   api:

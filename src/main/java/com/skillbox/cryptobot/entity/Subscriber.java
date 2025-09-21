@@ -22,4 +22,6 @@ public class Subscriber {
     private Long telegramId;
 
     private Integer price;
+
+    private Long pointOfNotification;
 }

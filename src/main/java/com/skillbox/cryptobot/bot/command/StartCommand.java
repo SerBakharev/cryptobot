@@ -52,6 +52,7 @@ public class StartCommand implements IBotCommand {
             Subscriber subscriber = new Subscriber();
             subscriber.setId(UUID.randomUUID());
             subscriber.setTelegramId(message.getChatId());
+            subscriber.setPointOfNotification(1L);
             databaseSubscriberService.save(subscriber);
 
         } catch (TelegramApiException e) {
